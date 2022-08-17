@@ -1,0 +1,47 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+  }
+
+  td,
+  th {
+    padding: 8px;
+  }
+
+  tr {
+      height: 50px;
+  }
+
+  &__row:hover {
+    background-color: #33373d;
+  }
+
+  &--sub {
+    background-color: #292c36;
+    border-left: grey 5px solid;
+  }
+}
+
+.chart {
+    height: 300px;
+    width: 50%;
+}
+
+.position-detail {
+    background-color: #292c36;
+    display: flex;
+}
+
+.position-info {
+    width: 50%;
+}
+
+.position-info-table {
+    margin-left: 50px;
+}
