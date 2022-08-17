@@ -18,6 +18,10 @@
       height: 50px;
   }
 
+  &__row {
+    border-top: solid 1px #292c36;
+  }
+
   &__row:hover {
     background-color: #33373d;
   }
@@ -34,7 +38,7 @@
 }
 
 .position-detail {
-    background-color: #292c36;
+    background-color: #1a1d24;
     display: flex;
 }
 
@@ -43,5 +47,7 @@
 }
 
 .position-info-table {
-    margin-left: 50px;
+    margin: 10px;
+    padding-left: 10px;
+    border-left: solid 1px #292c36;
 }
