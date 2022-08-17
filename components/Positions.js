@@ -46,7 +46,7 @@ const renderSubComponent = ({ row }) => {
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Positions() {
-  const { data, error } = useSWR(`http://localhost:3000/positions`, fetcher, {
+  const { data, error } = useSWR(`https://api-tuanpham-future.mooo.com/positions`, fetcher, {
     refreshInterval: 1000,
   });
 
