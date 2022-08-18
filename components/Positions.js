@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import useSWR from "swr";
 
 import {
   createColumnHelper,
@@ -43,17 +42,14 @@ const renderSubComponent = ({ row }) => {
   return <Position pos={row.original} />;
 };
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function Positions() {
-  const { data, error } = useSWR(`https://api-tuanpham-future.mooo.com/positions`, fetcher, {
-    refreshInterval: 1000,
-  });
+export default function Positions(props) {
+    const positions = props.positions;
 
   const [sorting, setSorting] = React.useState([]);
 
   const table = useReactTable({
-    data: data,
+    data: positions,
     columns,
     state: { sorting },
     debugTable: true,
@@ -63,9 +59,6 @@ export default function Positions() {
     getSortedRowModel: getSortedRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
   });
-
-  if (error) return <p>Loading failed...</p>;
-  if (!data) return <h1>Loading...</h1>;
 
   return (
     <div>
