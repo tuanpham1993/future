@@ -28,6 +28,10 @@ const columns = [
     header: () => "State",
     cell: (info) => info.renderValue(),
   }),
+  columnHelper.accessor("notional", {
+    header: () => "Notional",
+    cell: (info) => info.renderValue(),
+  }),
   columnHelper.accessor("lastAction", {
     header: () => "Last Update",
     cell: (info) => parseTime(info.renderValue()),
